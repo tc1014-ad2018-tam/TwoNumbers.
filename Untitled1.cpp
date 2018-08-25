@@ -1,5 +1,6 @@
 /*
-
+Autor: Victor Manuel Gastelum Huitzil
+Fecha: 25/08/18
 */
 #include <stdio.h>
 #include <unistd.h>
