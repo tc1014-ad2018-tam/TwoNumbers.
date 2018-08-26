@@ -1,62 +1,55 @@
-[Project]
-FileName=Project1.dev
-Name=Project1
-Type=1
-Ver=2
-ObjFiles=
-Includes=
-Libs=
-PrivateResource=
-ResourceIncludes=
-MakeIncludes=
-Compiler=
-CppCompiler=
-Linker=
-IsCpp=0
-Icon=
-ExeOutput=
-ObjectOutput=
-LogOutput=
-LogOutputEnabled=0
-OverrideOutput=0
-OverrideOutputName=
-HostApplication=
-UseCustomMakefile=0
-CustomMakefile=
-CommandLine=
-Folders=
-IncludeVersionInfo=0
-SupportXPThemes=0
-CompilerSet=0
-CompilerSettings=0000000000000000000000000
-UnitCount=1
+/*
+Autor: Victor Manuel Gastelum Huitzil
+Fecha:25/08/18
+*/
+#include <stdio.h>
+#include <unistd.h>
+#include <locale.h>
 
-[VersionInfo]
-Major=1
-Minor=0
-Release=0
-Build=0
-LanguageID=1033
-CharsetID=1252
-CompanyName=
-FileVersion=
-FileDescription=Developed using the Dev-C++ IDE
-InternalName=
-LegalCopyright=
-LegalTrademarks=
-OriginalFilename=
-ProductName=
-ProductVersion=
-AutoIncBuildNr=0
-SyncProduct=1
+int main() {
 
-[Unit1]
-FileName=..\..\Nueva carpeta\TwoNumbers\Untitled2.c
-CompileCpp=0
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
+setlocale(LC_ALL, "spanish");
 
+    // Declaracion de variables.
+    double num1;
+    double num2;
+    double div;
+    double suma;
+    double resta;
+    double mul;
+    
+    system("COLOR 70");
+    
+    printf("Bienvenido, este programa está diseñado para sumar, restar, dividir y multiplicar 2 números que me proporciones\n");
+
+    // Solicita los numeros y guarda los valores.
+    printf("Ingrese el primer número: ");
+    scanf("%lf", &num1);
+    printf("Ingrese el segundo número: ");
+    scanf("%lf", &num2);
+    
+     system("cls"); //Limpia la pantalla
+    
+	// Se establece un if y else por si el usuario nos proporciona el numero 0 como entrada. 
+    if (num1!=0 && num2!=0) {
+    		div = num1 / num2;
+    printf("El cociente de los números es: %lf\n", div);
+}
+
+    else {   	
+    printf("No se puede divir entre cero \n");	
+}
+
+
+        // Se hacen los calculos y los muestra en pantalla.
+    suma = num1 + num2;
+    // Presenta el resultado.
+    printf("La suma de los números es: %lf\n", suma);
+    resta = num1 - num2;
+    printf("La resta de los números es: %lf\n", resta);
+    mul = num1 * num2;
+    printf("El producto de los números es: %lf\n", mul);
+    
+    return 0;
+
+}
